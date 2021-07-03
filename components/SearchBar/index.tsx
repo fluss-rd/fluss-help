@@ -5,6 +5,7 @@ import React, { FC, ChangeEvent, useEffect, useState } from "react";
 
 interface SearchBarProps {
   placeholder: string;
+  onChange: (value: string) => void;
 }
 
 const SearchBar: FC<SearchBarProps> = (props) => {
@@ -12,7 +13,9 @@ const SearchBar: FC<SearchBarProps> = (props) => {
   const [value, setValue] = useState("");
 
   const handleChange = (e: any) => {
-    setValue(e.target.value);
+    const value = e.target.value as string;
+    setValue(value);
+    props.onChange(value);
   };
 
   return (
