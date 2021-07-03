@@ -3,17 +3,18 @@ import React, { FC } from "react";
 import { Typography } from "@material-ui/core";
 import ElementCard from "../components/ElementCard";
 import SearchBar from "../components/SearchBar";
+import { getSortedPostsData } from "../lib/posts";
+import { NextPage } from "next";
+import { useRouter } from "next/router";
 
-interface HomeProps {}
+interface HomeProps {
+  posts: any[];
+}
 
-const Home: FC<HomeProps> = (props) => {
+const Home: NextPage<HomeProps> = ({ posts }) => {
   const classes = useStyles();
-  const elements = [
-    "Este es un título particular",
-    "Este es otro",
-    "Por esta razón soñamos",
-    "Hey, esto es así",
-  ];
+  const router = useRouter();
+  const goToPost = (id: any) => () => router.push(`/support/${id}`);
 
   return (
     <div>
@@ -25,8 +26,8 @@ const Home: FC<HomeProps> = (props) => {
       <br />
       <br />
       <div className={classes.elements}>
-        {elements.map((element) => (
-          <ElementCard title={element} />
+        {posts.map(({ id, date, title }) => (
+          <ElementCard key={id} title={title} onClick={goToPost(id)} />
         ))}
       </div>
     </div>
@@ -43,6 +44,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
+export async function getStaticProps() {
+  const posts = getSortedPostsData();
+  const data = { props: { posts } };
+
+  return data;
+}
 
 export default Home;
 

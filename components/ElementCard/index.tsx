@@ -14,13 +14,14 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 interface ElementCardProps {
   title: string;
+  onClick: () => void;
 }
 
-const ElementCard: FC<ElementCardProps> = ({ title }) => {
+const ElementCard: FC<ElementCardProps> = ({ title, onClick }) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} onClick={onClick}>
       <CardActionArea>
         <CardContent className={classes.content}>
           <div>
