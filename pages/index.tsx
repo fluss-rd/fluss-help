@@ -1,15 +1,16 @@
 import { makeStyles } from "@material-ui/core/styles";
-import React, { FC } from "react";
-import { Typography } from "@material-ui/core";
+import React from "react";
 import ElementCard from "../components/ElementCard";
 import SearchBar from "../components/SearchBar";
 import { getSortedPostsData } from "../lib/posts";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 import PageTitle from "../components/PageTitle";
+import Post from "../models/Post";
+import { Grid } from "@material-ui/core";
 
 interface HomeProps {
-  posts: any[];
+  posts: Post[];
 }
 
 const Home: NextPage<HomeProps> = ({ posts }) => {
@@ -24,16 +25,18 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
       <SearchBar placeholder="Busca lo que quires hacer" />
       <br />
       <br />
-      <div className={classes.elements}>
-        {posts.map(({ id, title, description }) => (
-          <ElementCard
-            key={id}
-            title={title}
-            onClick={goToPost(id)}
-            description={description}
-          />
+      <Grid container spacing={3}>
+        {posts.map(({ id, title, description, imageUrl }) => (
+          <Grid item xs={12} key={id}>
+            <ElementCard
+              title={title}
+              onClick={goToPost(id)}
+              description={description}
+              imageUrl={imageUrl}
+            />
+          </Grid>
         ))}
-      </div>
+      </Grid>
     </div>
   );
 };
