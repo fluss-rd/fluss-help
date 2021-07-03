@@ -5,14 +5,17 @@ import { Typography, Paper, Button } from "@material-ui/core";
 import Head from "next/head";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import { useRouter } from "next/router";
+import PostData from "../../models/PostData";
 
 interface PostProps {
-  postData: any;
+  postData: PostData;
 }
 
 const Post: FC<PostProps> = ({ postData }) => {
   const classes = useStyles();
   const router = useRouter();
+
+  console.log({ postData });
 
   return (
     <>

@@ -4,16 +4,13 @@ import {
   Typography,
   CardActionArea,
   Card,
-  ListItem,
-  ListItemText,
   CardContent,
-  CardActions,
-  Button,
 } from "@material-ui/core";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 interface ElementCardProps {
   title: string;
+  description: string;
   onClick: () => void;
 }
 

@@ -1,6 +1,7 @@
 ---
 title: "¿Cómo enviar correo?"
 date: "2021-01-01"
+description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime, molestias voluptatibus, dignissimos veritatis praesentium repudiandae sunt est nesciunt at eaque sequi repellat delectus commodi fugiat possimus et. Labore, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime, molestias voluptatibus, dignissimos veritatis praesentium repudiandae sunt est nesciunt at eaque sequi repellat delectus commodi fugiat possimus et. Labore, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime, molestias voluptatibus, dignissimos veritatis praesentium repudiandae sunt est nesciunt at eaque sequi repellat delectus commodi fugiat possimus et. Labore, quidem."
 ---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime, molestias voluptatibus, dignissimos veritatis praesentium repudiandae sunt est nesciunt at eaque sequi repellat delectus commodi fugiat possimus et. Labore, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime, molestias voluptatibus, dignissimos veritatis praesentium repudiandae sunt est nesciunt at eaque sequi repellat delectus commodi fugiat possimus et. Labore, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime, molestias voluptatibus, dignissimos veritatis praesentium repudiandae sunt est nesciunt at eaque sequi repellat delectus commodi fugiat possimus et. Labore, quidem.

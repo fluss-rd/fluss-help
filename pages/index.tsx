@@ -26,8 +26,13 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
       <br />
       <br />
       <div className={classes.elements}>
-        {posts.map(({ id, date, title }) => (
-          <ElementCard key={id} title={title} onClick={goToPost(id)} />
+        {posts.map(({ id, title, description }) => (
+          <ElementCard
+            key={id}
+            title={title}
+            onClick={goToPost(id)}
+            description={description}
+          />
         ))}
       </div>
     </div>

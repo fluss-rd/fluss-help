@@ -1,6 +1,5 @@
 import { Container, CssBaseline, Toolbar } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
-import { useRouter } from "next/router";
 import React, { FC } from "react";
 
 import FlussAppBar from "./AppBar";
