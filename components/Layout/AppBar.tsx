@@ -12,11 +12,13 @@ import React, { FC } from "react";
 
 const AppBar: FC = () => {
   const classes = useStyles();
+  const router = useRouter();
+  const goToHome = () => router.push("/");
 
   return (
     <Navbar position="fixed" color="inherit">
       <Toolbar>
-        <Button className={classes.brand}>
+        <Button className={classes.brand} onClick={goToHome}>
           <div className={classes.logo}>
             <Image src="/images/logo.png" alt="Logo" width={35} height={35} />
           </div>
