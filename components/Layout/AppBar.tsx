@@ -1,7 +1,6 @@
 import {
   AppBar as Navbar,
   Button,
-  Divider,
   Toolbar,
   Typography,
 } from "@material-ui/core";
@@ -13,12 +12,12 @@ import React, { FC } from "react";
 const AppBar: FC = () => {
   const classes = useStyles();
   const router = useRouter();
-  const goToHome = () => router.push("/");
+  const goTo = (path: string) => () => router.push(path);
 
   return (
     <Navbar position="fixed" color="inherit">
       <Toolbar>
-        <Button className={classes.brand} onClick={goToHome}>
+        <Button className={classes.brand} onClick={goTo("/")}>
           <div className={classes.logo}>
             <Image src="/images/logo.png" alt="Logo" width={35} height={35} />
           </div>
@@ -43,7 +42,11 @@ const AppBar: FC = () => {
         </Button>
         <div className={classes.startButtons} />
         <div className={classes.endButtons}>
-          <Button color="default" className={classes.reportsButton}>
+          <Button
+            color="default"
+            className={classes.reportsButton}
+            onClick={goTo("/contact")}
+          >
             Contacto
           </Button>
           <Button color="default" className={classes.reportsButton}>
