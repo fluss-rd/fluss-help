@@ -36,7 +36,7 @@ const Post: FC<PostProps> = ({ postData }) => {
             {postData.title}
           </Typography>
           <div
-            style={{ fontSize: 16 }}
+            className={classes.contentHtml}
             dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
           />
         </Paper>
@@ -46,6 +46,13 @@ const Post: FC<PostProps> = ({ postData }) => {
 };
 
 const useStyles = makeStyles((theme) => ({
+  contentHtml: {
+    fontSize: 16,
+
+    "& > img": {
+      border: "1px solid black"
+    }
+  },
   content: {
     padding: theme.spacing(3),
   },

@@ -23,7 +23,7 @@ const ElementCard: FC<ElementCardProps> = (props) => {
 
   return (
     <CardActionArea>
-      <Card className={classes.root} onClick={onClick}>
+      <Card onClick={onClick} style={{ display: "flex" }}>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <CardContent className={classes.content}>
             <div>
@@ -32,12 +32,13 @@ const ElementCard: FC<ElementCardProps> = (props) => {
               <Typography color="textSecondary">{description}</Typography>
             </div>
           </CardContent>
-
-          <CardActions>
-            <Button color="primary">Abrir</Button>
-          </CardActions>
+          <CardContent>
+            <Typography variant="button" >Abrir</Typography>
+          </CardContent>
         </div>
-        <CardMedia className={classes.media} image={imageUrl} title={title} />
+        {imageUrl && (
+          <CardMedia className={classes.media} image={imageUrl} title={title} />
+        )}
       </Card>
     </CardActionArea>
   );
@@ -55,10 +56,10 @@ const useStyles = makeStyles({
   },
   root: {
     display: "flex",
-    width: "100%",
+    alignItems: "center",
   },
   media: {
-    width: 700,
+    width: 800,
   },
 });
 

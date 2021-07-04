@@ -19,6 +19,9 @@ const Contact = (props) => {
         <Typography variant="h4">Contacto</Typography>
       </ListItem>
       <ListItem>
+        <ListItemText primary="Actualmente solo contamos comunicación vía correo electrónico:" />
+      </ListItem>
+      <ListItem>
         <ListItemAvatar>
           <Avatar>
             <MailOutlineIcon />
@@ -32,7 +35,7 @@ const Contact = (props) => {
 
 const useStyles = makeStyles((theme) => ({
   content: {
-    padding: theme.spacing(2)
+    padding: theme.spacing(2),
   },
 }));
 
