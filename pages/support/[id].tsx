@@ -15,8 +15,6 @@ const Post: FC<PostProps> = ({ postData }) => {
   const classes = useStyles();
   const router = useRouter();
 
-  console.log({ postData });
-
   return (
     <>
       <Head>
@@ -48,9 +46,11 @@ const Post: FC<PostProps> = ({ postData }) => {
 const useStyles = makeStyles((theme) => ({
   contentHtml: {
     fontSize: 16,
-
-    "& > img": {
-      border: "1px solid black"
+    "& img": {
+      border: `1px solid ${theme.palette.grey[300]}`,
+      borderRadius: 10,
+      maxWidth: "100%",
+      boxShadow: "10px 10px 8px #e4e4e4",
     }
   },
   content: {

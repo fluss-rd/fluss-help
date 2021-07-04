@@ -4,8 +4,6 @@ import {
   CardMedia,
   Typography,
   CardActionArea,
-  CardActions,
-  Button,
   Card,
   CardContent,
 } from "@material-ui/core";
@@ -33,7 +31,7 @@ const ElementCard: FC<ElementCardProps> = (props) => {
             </div>
           </CardContent>
           <CardContent>
-            <Typography variant="button" >Abrir</Typography>
+            <Typography variant="button">Abrir</Typography>
           </CardContent>
         </div>
         {imageUrl && (
