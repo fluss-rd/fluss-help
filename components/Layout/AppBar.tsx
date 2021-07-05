@@ -72,6 +72,12 @@ const AppBar: FC = () => {
           <Button
             color="default"
             className={classes.reportsButton}
+            style={{ background: computeBackground("/faq") }}
+            onClick={goTo("/faq")}
+          >Preguntas frecuentes</Button>
+          <Button
+            color="default"
+            className={classes.reportsButton}
             href="https://fluss-bioteam.vercel.app/"
             target="_blank"
           >

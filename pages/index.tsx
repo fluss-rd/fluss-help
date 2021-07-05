@@ -33,7 +33,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
       <PageTitle>Ayuda a usuarios</PageTitle>
       <br />
       <SearchBar
-        placeholder="Busca lo que quires hacer"
+        placeholder="Busca cómo hacer algo o alguna duda sobre nosotros"
         onChange={onKeywordChange}
       />
       <br />

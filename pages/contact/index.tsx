@@ -15,27 +15,32 @@ const Contact = (props) => {
 
   return (
     <Paper className={classes.content}>
-      <ListItem>
-        <Typography variant="h4">Contacto</Typography>
-      </ListItem>
-      <ListItem>
-        <ListItemText primary="Actualmente solo contamos comunicación vía correo electrónico:" />
-      </ListItem>
-      <ListItem>
+      <Typography variant="h4">Contacto</Typography>
+      <br />
+      <ListItemText primary="Actualmente solo contamos comunicación vía correo electrónico:" />
+      <br />
+      <div className={classes.contact}>
         <ListItemAvatar>
           <Avatar>
             <MailOutlineIcon />
           </Avatar>
         </ListItemAvatar>
         <ListItemText primary="Correo" secondary="bioteam.fluss@gmail.com" />
-      </ListItem>
+      </div>
     </Paper>
   );
 };
 
 const useStyles = makeStyles((theme) => ({
   content: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(3),
+  },
+  contact: {
+    display: "flex",
+    alignItems: "center",
+    "& > :not(:last-child)": {
+      marginRight: theme.spacing(0),
+    },
   },
 }));
 
